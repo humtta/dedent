@@ -7,8 +7,8 @@ import (
 func TestDedent(t *testing.T) {
 	tests := []struct {
 		name string
-		want string
 		s    string
+		want string
 	}{}
 
 	for _, tt := range tests {
@@ -24,9 +24,9 @@ func TestDedent(t *testing.T) {
 func TestDedentf(t *testing.T) {
 	tests := []struct {
 		name string
-		want string
 		s    string
 		a    []any
+		want string
 	}{}
 
 	for _, tt := range tests {
