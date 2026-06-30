@@ -21,7 +21,7 @@ func TestD(t *testing.T) {
 	}
 }
 
-func TestDedentf(t *testing.T) {
+func TestDf(t *testing.T) {
 	tests := []struct {
 		name string
 		s    string
@@ -31,9 +31,9 @@ func TestDedentf(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := Dedentf(tt.s, tt.a...)
+			got := Df(tt.s, tt.a...)
 			if got != tt.want {
-				t.Errorf("Dedentf(%q, %v)\ngot: %q\nwant: %q", tt.s, tt.a, got, tt.want)
+				t.Errorf("Df(%q, %v)\ngot: %q\nwant: %q", tt.s, tt.a, got, tt.want)
 			}
 		})
 	}
