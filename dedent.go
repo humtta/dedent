@@ -4,10 +4,10 @@ import (
 	"fmt"
 )
 
-func Dedent(s string) string {
+func D(s string) string {
 	return ""
 }
 
 func Dedentf(s string, a ...any) string {
-	return Dedent(fmt.Sprintf(s, a...))
+	return D(fmt.Sprintf(s, a...))
 }

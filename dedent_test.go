@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestDedent(t *testing.T) {
+func TestD(t *testing.T) {
 	tests := []struct {
 		name string
 		s    string
@@ -13,9 +13,9 @@ func TestDedent(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := Dedent(tt.s)
+			got := D(tt.s)
 			if got != tt.want {
-				t.Errorf("Dedent(%q)\ngot: %q\nwant: %q", tt.s, got, tt.want)
+				t.Errorf("D(%q)\ngot: %q\nwant: %q", tt.s, got, tt.want)
 			}
 		})
 	}
