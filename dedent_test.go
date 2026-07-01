@@ -136,7 +136,13 @@ func TestDf(t *testing.T) {
 		s    string
 		a    []any
 		want string
-	}{}
+	}{
+		{
+			s:    "  %s\n    %s",
+			a:    []any{"lorem", "ipsum"},
+			want: "lorem\n  ipsum",
+		},
+	}
 
 	for _, tt := range tests {
 		got := Df(tt.s, tt.a...)
