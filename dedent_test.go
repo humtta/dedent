@@ -141,3 +141,13 @@ func TestDf(t *testing.T) {
 		t.Errorf("Df(%q, %v)\ngot: %q\nwant: %q", s, a, got, want)
 	}
 }
+
+func BenchmarkD(b *testing.B) {
+	for b.Loop() {
+		D(`
+			lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. accumsan blandit felis eu volutpat dolor mattis bibendum mollis
+			ultrices potenti ante himenaeos consectetur sagittis viverra.
+		`)
+	}
+}
