@@ -132,22 +132,12 @@ func TestD(t *testing.T) {
 }
 
 func TestDf(t *testing.T) {
-	tests := []struct {
-		s    string
-		a    []any
-		want string
-	}{
-		{
-			s:    "  %s\n    %s",
-			a:    []any{"lorem", "ipsum"},
-			want: "lorem\n  ipsum",
-		},
-	}
+	s := "  %s\n    %s"
+	a := []any{"lorem", "ipsum"}
+	want := "lorem\n  ipsum"
 
-	for _, tt := range tests {
-		got := Df(tt.s, tt.a...)
-		if got != tt.want {
-			t.Errorf("Df(%q, %v)\ngot: %q\nwant: %q", tt.s, tt.a, got, tt.want)
-		}
+	got := Df(s, a...)
+	if got != want {
+		t.Errorf("Df(%q, %v)\ngot: %q\nwant: %q", s, a, got, want)
 	}
 }
