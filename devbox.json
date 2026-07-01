@@ -8,6 +8,7 @@
   "shell": {
     "scripts": {
       "test": "go test ./...",
+      "bench": "go test -bench .",
       "fmt": "go fmt ./...",
       "vet": "go vet ./...",
       "check": [
