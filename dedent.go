@@ -2,10 +2,51 @@ package dedent
 
 import (
 	"fmt"
+	"strings"
 )
 
 func D(s string) string {
-	return ""
+	if i := strings.IndexByte(s, '\n'); i >= 0 && isBlank(s[:i]) {
+		s = s[i+1:]
+	}
+
+	var (
+		prefix   string
+		blank    int
+		nonBlank int
+	)
+
+	for i := range strings.Lines(s) {
+		indent := indentOf(i)
+		if isBlank(i) {
+			blank += len(indent)
+			continue
+		}
+		if nonBlank == 0 {
+			prefix = indent
+		} else {
+			prefix = commonPrefix(prefix, indent)
+		}
+		nonBlank++
+	}
+
+	if len(prefix) == 0 && blank == 0 {
+		return s
+	}
+
+	var b strings.Builder
+	b.Grow(len(s) - blank - nonBlank*len(prefix))
+
+	for i := range strings.Lines(s) {
+		if isBlank(i) {
+			i = i[len(indentOf(i)):]
+		} else {
+			i = i[len(prefix):]
+		}
+		b.WriteString(i)
+	}
+
+	return b.String()
 }
 
 func Df(s string, a ...any) string {
