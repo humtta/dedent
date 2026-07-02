@@ -24,3 +24,15 @@ func isBlank(s string) bool {
 	r := s[len(indentOf(s)):]
 	return r == "" || r == "\n"
 }
+
+func commonPrefix(a, b string) string {
+	if len(b) < len(a) {
+		a, b = b, a
+	}
+	for i := range len(a) {
+		if a[i] != b[i] {
+			return a[:i]
+		}
+	}
+	return a
+}
