@@ -11,3 +11,11 @@ func D(s string) string {
 func Df(s string, a ...any) string {
 	return D(fmt.Sprintf(s, a...))
 }
+
+func indentOf(s string) string {
+	i := 0
+	for i < len(s) && (s[i] == ' ' || s[i] == '\t') {
+		i++
+	}
+	return s[:i]
+}
