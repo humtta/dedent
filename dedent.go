@@ -19,3 +19,8 @@ func indentOf(s string) string {
 	}
 	return s[:i]
 }
+
+func isBlank(s string) bool {
+	r := s[len(indentOf(s)):]
+	return r == "" || r == "\n"
+}
