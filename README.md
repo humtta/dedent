@@ -11,8 +11,13 @@ module root:
 go get github.com/humtta/dedent@latest
 ```
 
+## Documentation
+
+The full API reference is available on [Go Packages].
+
 ## License
 
 This project is licensed under the [MIT License].
 
+[go packages]: https://pkg.go.dev/github.com/humtta/dedent
 [mit license]: LICENSE.md
