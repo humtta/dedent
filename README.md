@@ -4,7 +4,7 @@ A Go package to remove common leading whitespace from every line of a multiline 
 
 ## Requirements
 
-This package requires Go 1.24 or later, since it relies on the [`strings.Lines`] iterator.
+- Go 1.24 or later.
 
 ## Installation
 
