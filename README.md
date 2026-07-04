@@ -2,6 +2,11 @@
 
 A Go package to remove common leading whitespace from every line of a multiline string.
 
+In Go, string literals preserve every character in the source, including spaces and tabs. When a
+multiline literal is indented to align with surrounding code, that whitespace becomes part of the
+string value. This package computes the longest common indentation prefix across non-blank lines and
+removes it from each line.
+
 ## Requirements
 
 - Go 1.24 or later.
