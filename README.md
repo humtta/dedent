@@ -97,9 +97,9 @@ The full API reference is available on [Go Packages].
 The benchmark results below were obtained on an AMD Ryzen 7 5700U (Linux, x64) in a [Devbox]
 environment, using the `devbox run bench` command.
 
-```txt
-BenchmarkD-16    5828864    208.9 ns/op    256 B/op    1 allocs/op
-```
+| Benchmark       | Operations | Nanoseconds/op | Bytes/op | Allocations/op |
+|:---------------:|:----------:|:--------------:|:--------:|:--------------:|
+| `BenchmarkD-16` | 5,828,864  | 208.9          | 256      | 1              |
 
 ## License
 
