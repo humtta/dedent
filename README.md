@@ -100,7 +100,6 @@ BenchmarkD-16    5828864    208.9 ns/op    256 B/op    1 allocs/op
 
 This project is licensed under the [MIT License].
 
-[`strings.lines`]: https://pkg.go.dev/strings#Lines
 [`d`]: https://pkg.go.dev/github.com/humtta/dedent#D
 [`df`]: https://pkg.go.dev/github.com/humtta/dedent#Df
 [go packages]: https://pkg.go.dev/github.com/humtta/dedent
