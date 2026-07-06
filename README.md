@@ -1,11 +1,10 @@
 # Dedent
 
-A Go package to remove common leading whitespace from every line of a multiline string.
+A Go package to remove shared indentation from a multiline string.
 
-In Go, string literals preserve every character in the source, including spaces and tabs. When a
-multiline literal is indented to align with surrounding code, that whitespace becomes part of the
-string value. This package computes the longest common indentation prefix across non-blank lines and
-removes it from each line.
+In Go, raw string literals preserve every character from the source, including leading whitespace.
+When a multiline string is indented to align with surrounding code, that indentation becomes part of
+the value. This package identifies the shared indentation across lines and removes it.
 
 ## Requirements
 
