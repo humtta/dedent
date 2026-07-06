@@ -13,16 +13,10 @@ removes it from each line.
 
 ## Installation
 
-To install the latest version of this package, run the following command:
+Install the latest version of the package by running the following command:
 
 ```sh
 go get github.com/humtta/dedent@latest
-```
-
-Then, import it into your code:
-
-```go
-import "github.com/humtta/dedent"
 ```
 
 ## Usage
