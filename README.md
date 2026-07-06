@@ -59,6 +59,19 @@ func main() {
 }
 ```
 
+## Behavior
+
+The package applies the following rules when processing a multiline string:
+
+- Removes the first line if it's empty or blank.
+- Removes the longest indentation shared by all non-blank lines.
+- Removes all whitespace from blank lines.
+- Does not remove trailing whitespace from non-blank lines.
+- Does not remove empty lines.
+- Does not treat spaces and tabs as equivalent characters. Shared indentation evaluation requires
+  byte-for-byte equivalence.
+- Supports only LF line endings.
+
 ## Documentation
 
 The full API reference is available on [Go Packages].
