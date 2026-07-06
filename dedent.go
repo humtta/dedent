@@ -52,6 +52,7 @@ func D(s string) string {
 	return b.String()
 }
 
+// Df formats s with [fmt.Sprintf] and passes the result to [D].
 func Df(s string, a ...any) string {
 	return D(fmt.Sprintf(s, a...))
 }
