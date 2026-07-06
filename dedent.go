@@ -28,7 +28,7 @@ func D(s string) string {
 		if nonBlank == 0 {
 			prefix = indent
 		} else {
-			prefix = commonPrefix(prefix, indent)
+			prefix = sharedPrefix(prefix, indent)
 		}
 		nonBlank++
 	}
@@ -70,7 +70,7 @@ func isBlank(s string) bool {
 	return r == "" || r == "\n"
 }
 
-func commonPrefix(a, b string) string {
+func sharedPrefix(a, b string) string {
 	if len(b) < len(a) {
 		a, b = b, a
 	}
