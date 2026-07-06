@@ -57,6 +57,7 @@ func Df(s string, a ...any) string {
 	return D(fmt.Sprintf(s, a...))
 }
 
+// indentOf returns the indentation of s.
 func indentOf(s string) string {
 	i := 0
 	for i < len(s) && (s[i] == ' ' || s[i] == '\t') {
