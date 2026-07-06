@@ -1,3 +1,5 @@
+// Package dedent provides functions for removing shared indentation from
+// multiline strings.
 package dedent
 
 import (
