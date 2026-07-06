@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// D removes the shared indentation from each line of s.
 func D(s string) string {
 	if i := strings.IndexByte(s, '\n'); i >= 0 && isBlank(s[:i]) {
 		s = s[i+1:]
