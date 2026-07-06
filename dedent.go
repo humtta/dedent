@@ -72,6 +72,7 @@ func isBlank(s string) bool {
 	return r == "" || r == "\n"
 }
 
+// sharedPrefix returns the longest prefix shared by a and b.
 func sharedPrefix(a, b string) string {
 	if len(b) < len(a) {
 		a, b = b, a
