@@ -48,14 +48,12 @@ func main() {
   // <div>
   //   <h1>Hello, %s!</h1>
   // </div>
-  //
 
   fmt.Print(dedent.Df(html, "World"))
   // Output:
   // <div>
   //   <h1>Hello, World!</h1>
   // </div>
-  //
 }
 ```
 
