@@ -22,7 +22,7 @@ go get github.com/humtta/dedent@latest
 
 This package provides only two functions:
 
-- [`D`] accepts a string and returns a new one with the common indentation removed from each line.
+- [`D`] accepts a string and returns a new one with the shared indentation removed from each line.
 - [`Df`] formats the given string with [`fmt.Sprintf`] and passes the result to [`D`].
 
 Here's an example:
