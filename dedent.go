@@ -66,6 +66,7 @@ func indentOf(s string) string {
 	return s[:i]
 }
 
+// isBlank reports whether s is empty or blank.
 func isBlank(s string) bool {
 	r := s[len(indentOf(s)):]
 	return r == "" || r == "\n"
