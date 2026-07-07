@@ -157,6 +157,20 @@ func ExampleD() {
 	// </div>
 }
 
+func ExampleDf() {
+	html := `
+		<div>
+			<h1>Hello, %s!</h1>
+		</div>
+	`
+
+	fmt.Print(Df(html, "World"))
+	// Output:
+	// <div>
+	// 	<h1>Hello, World!</h1>
+	// </div>
+}
+
 func BenchmarkD(b *testing.B) {
 	for b.Loop() {
 		D(`
