@@ -1,6 +1,7 @@
 package dedent
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -140,6 +141,20 @@ func TestDf(t *testing.T) {
 	if got != want {
 		t.Errorf("Df(%q, %v)\ngot: %q\nwant: %q", s, a, got, want)
 	}
+}
+
+func ExampleD() {
+	html := `
+		<div>
+			<h1>Hello, World!</h1>
+		</div>
+	`
+
+	fmt.Print(D(html))
+	// Output:
+	// <div>
+	// 	<h1>Hello, World!</h1>
+	// </div>
 }
 
 func BenchmarkD(b *testing.B) {
