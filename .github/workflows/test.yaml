@@ -14,4 +14,4 @@ jobs:
         with:
           enable-cache: true
 
-      - run: task test
+      - run: devbox run task test
