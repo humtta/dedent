@@ -14,4 +14,6 @@ jobs:
         with:
           enable-cache: true
 
+      # Tools installed with Devbox are not added to the PATH. Prefix commands
+      # with `devbox run` to invoke them correctly.
       - run: devbox run task test
