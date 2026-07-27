@@ -5,8 +5,22 @@ version: "3"
 silent: true
 
 tasks:
-  test: go test ./...
-  bench: go test -bench . -benchmem
-  format: go fmt ./...
-  lint: go vet ./...
-  check: task format lint
+  test:
+    desc: Runs the tests
+    cmd: go test ./...
+
+  bench:
+    desc: Runs the benchmarks
+    cmd: go test -bench . -benchmem
+
+  format:
+    desc: Formats Go code
+    cmd: go fmt ./...
+
+  lint:
+    desc: Lints Go code
+    cmd: go vet ./...
+
+  check:
+    desc: Formats and lints Go code
+    cmd: task format lint
